@@ -1,0 +1,28 @@
+{
+  "name": "delivery-api",
+  "version": "1.0.0",
+  "description": "API de entrega de encomendas",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpfreitas-dev/delivery-api.git"
+  },
+  "author": "João Paulo Freitas Pinho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpfreitas-dev/delivery-api/issues"
+  },
+  "homepage": "https://github.com/jpfreitas-dev/delivery-api#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^20.14.12",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4"
+  }
+}
