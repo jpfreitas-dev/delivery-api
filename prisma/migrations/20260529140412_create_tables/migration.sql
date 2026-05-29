@@ -1,5 +1,5 @@
 -- CreateEnum
-CREATE TYPE "UserRole" AS ENUM ('custumer', 'sale');
+CREATE TYPE "UserRole" AS ENUM ('customer', 'sale');
 
 -- CreateEnum
 CREATE TYPE "deliveryStatus" AS ENUM ('processing', 'shipped', 'delivered');
@@ -10,7 +10,7 @@ CREATE TABLE "users" (
     "name" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "password" TEXT NOT NULL,
-    "role" "UserRole" NOT NULL DEFAULT 'custumer',
+    "role" "UserRole" NOT NULL DEFAULT 'customer',
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updated_at" TIMESTAMP(3),
 
