@@ -5,7 +5,6 @@ import { app } from "@/app";
 describe("DeliveriesController", () => {
   let user_id: string;
   let token: string;
-  let delivery_id: string;
 
   afterAll(async () => {
     await prisma.delivery.deleteMany({ where: { userId: user_id } });
