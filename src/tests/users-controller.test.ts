@@ -11,14 +11,14 @@ describe("UsersController", () => {
 
   it("should create a new user", async () => {
     const response = await request(app).post("/users").send({
-      name: "Test User",
-      email: "testuser@example.com",
+      name: "Auth Test User",
+      email: "authtestuser@example.com",
       password: "password123",
     })
 
     expect(response.status).toBe(201);
     expect(response.body).toHaveProperty("id");
-    expect(response.body.name).toBe("Test User");
+    expect(response.body.name).toBe("Auth Test User");
 
     user_id = response.body.id;
   });
@@ -26,7 +26,7 @@ describe("UsersController", () => {
   it("should throw an error if user with the same email already exists", async () => {
     const response = await request(app).post("/users").send({
       name: "Duplicate User",
-      email: "testuser@example.com",
+      email: "authtestuser@example.com",
       password: "password123",
     });
 
@@ -36,7 +36,7 @@ describe("UsersController", () => {
 
   it("should throw a validation error if email is invalid", async () => {
     const response = await request(app).post("/users").send({
-      name: "Test User",
+      name: "Auth Test User",
       email: "invalid-email",
       password: "password123",
     });
